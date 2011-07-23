@@ -1,0 +1,17 @@
+{
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info)",
+  "name": "json-storage",
+  "description": "A wrapper for storage engines which use the W3C Storage API",
+  "keywords": ["ender", "localStorage", "sessionStorage", "globalStorage", "Storage"],
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/json-storage-js.git"
+  },
+  "engines": {
+    "node": ">= v0.2.0"
+  },
+  "main": "json-storage.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
