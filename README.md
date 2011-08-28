@@ -21,7 +21,7 @@ Made fo for Node.JS and Ender.JS (browser-side).
 
     var localStorage = require('localStorage')
       , JsonStorage = require('json-storage')
-      , db = JsonStorage(localStorage)
+      , db = JsonStorage(localStorage, 'my-app-prefix')
       , myValue = {
             foo: "bar"
           , baz: "quux"
@@ -34,6 +34,7 @@ Made fo for Node.JS and Ender.JS (browser-side).
 API
 ===
 
+  * JsonStorage(DOMStorage, 'application-prefix') // optional prefix
   * get(key)
   * set(key, value)
   * remove(key)
