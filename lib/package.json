@@ -3,7 +3,7 @@
   "name": "json-storage",
   "description": "A wrapper for storage engines which use the W3C Storage API",
   "keywords": ["ender", "localStorage", "sessionStorage", "globalStorage", "Storage"],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/coolaj86/json-storage-js.git"
@@ -11,7 +11,7 @@
   "engines": {
     "node": ">= v0.2.0"
   },
-  "main": "json-storage.js",
+  "main": "index",
   "dependencies": {},
   "devDependencies": {}
 }
