@@ -25,4 +25,6 @@
 
   db.set('a', { 'a': [1] });
   assert.deepEqual({'a': [1] }, db.get('a'));
+
+  console.log('[PASS] no assertions failed');
 }());
