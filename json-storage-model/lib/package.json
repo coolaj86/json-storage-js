@@ -1,0 +1,20 @@
+{
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info)",
+  "name": "json-storage-model",
+  "description": "An abstraction for models to be stored in json-storage",
+  "keywords": ["ender", "model", "json-storage", "localStorage", "sessionStorage", "globalStorage", "Storage"],
+  "version": "0.9.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/json-storage-js.git"
+  },
+  "engines": {
+    "node": ">= v0.2.0"
+  },
+  "main": "index",
+  "dependencies": {
+      "json-storage": ">= 1.0.0"
+    , "node-uuid": ">= 0.0.0"
+  },
+  "devDependencies": {}
+}
