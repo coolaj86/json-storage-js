@@ -114,7 +114,7 @@
     return future.passable();
   }
 
-  var Future = require('Future')
+  var Future = require('future')
     , Join = require('Join')
     ;
 

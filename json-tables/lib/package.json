@@ -3,7 +3,7 @@
   , "name": "json-tables"
   , "description": "An abstraction for models to be stored in json-storage"
   , "keywords": ["ender", "orm", "sql", "model", "json-storage", "localStorage", "sessionStorage", "globalStorage", "Storage"]
-  , "version": "0.7.0"
+  , "version": "0.7.1"
   , "repository": {
         "type": "git"
       , "url": "git://github.com/coolaj86/json-storage-js.git"
