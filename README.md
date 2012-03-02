@@ -1,7 +1,7 @@
-jsonStorage
+JsonStorage
 ====
 
-A light abstraction for DOMStorage (such as localStorage).
+A light, sensible, abstraction for DOMStorage (such as localStorage).
 
 Installation
 ===
@@ -34,16 +34,16 @@ Made fo for Node.JS and Ender.JS (browser-side).
 API
 ===
 
-  * `create(DOMStorage, namespace)`
+  * `JsonStorage.create(DOMStorage, namespace)`
     * `DOMStorage` should be globalStorage, sessionStorage, or localStorage
     * `namespace` is optional string which allows multiple non-conflicting storage containers
-  * `get(key)`
-  * `set(key, value)`
-  * `remove(key)`
-  * `clear()`
-  * `keys()`
-  * `size()`
-  * `toJSON()`
+  * `store.get(key)`
+  * `store.set(key, value)`
+  * `store.remove(key)`
+  * `store.clear()`
+  * `store.keys()`
+  * `store.size()`
+  * `store.toJSON()`
   * `JSON.stringify(store)`
 
 Upgrading from localStorage and 1.0.x to 1.1.x
