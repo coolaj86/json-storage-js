@@ -1,7 +1,7 @@
 JsonStorage
 ====
 
-A light, sensible, abstraction for DOMStorage (such as localStorage).
+A light, sensible abstraction for DOMStorage (such as localStorage).
 
 Installation
 ===
