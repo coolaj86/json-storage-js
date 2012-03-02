@@ -8,7 +8,7 @@
     ;
 
   assert.equal(null, db.get('x'));
-  assert.deepEqual([], db.keys());
+  assert.deepEqual([], db.keys(), 'found keys in empty db: ' + JSON.stringify(db.keys()));
   db.clear();
   assert.equal(null, db.get('x'));
 
@@ -22,6 +22,10 @@
   db.set('a', 'b');
   db.clear();
   assert.deepEqual([], db.keys());
+
+  db.set('a', 'b');
+  assert.deepEqual(['a'], db.keys());
+  assert.deepEqual({ 'a': 'b' }, db.toJSON());
 
   console.log("Done! All tests pass.");
 }());
