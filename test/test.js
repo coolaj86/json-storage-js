@@ -2,8 +2,8 @@
   "use strict";
 
   var localStorage = require('localStorage')
-    , JsonStorage = require('json-storage')
-    , db = JsonStorage(localStorage)
+    , JsonStorage = require('../lib/').JsonStorage
+    , db = JsonStorage.create(localStorage)
     , assert = require('assert')
     ;
 

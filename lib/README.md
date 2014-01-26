@@ -6,22 +6,28 @@ A light, sensible abstraction for DOMStorage (such as localStorage).
 Installation
 ===
 
-Ender.JS (Browser)
+Bower (Browser)
 
-    ender build json-storage
+```bash
+bower install json-storage
+# or
+wget https://raw2.github.com/coolaj86/json-storage-js/master/lib/json-storage.js
+```
 
 Node.JS (Server)
 
-    npm install localStorage json-storage
+```bash
+npm install localStorage json-storage
+```
 
 Usage
 ===
 
-Made fo for Node.JS and Ender.JS (browser-side).
+Made for Node.js and Bower (browser-side).
 
     var localStorage = require('localStorage')
-      , JsonStorage = require('json-storage')
-      , store = JsonStorage.create(localStorage, 'my-widget-namespace')
+      , JsonStorage = require('json-storage').JsonStorage
+      , store = JsonStorage.create(localStorage, 'my-widget-namespace', { stringify: false })
       , myValue = {
             foo: "bar"
           , baz: "quux"
@@ -30,6 +36,9 @@ Made fo for Node.JS and Ender.JS (browser-side).
 
     store.set('myKey', myValue); 
     myValue = store.get('myKey');
+
+NOTE: When using with Node and the `localStorage` module,
+you may wish to pass the `{ stringify: false }` option to prevent double stringification.
 
 API
 ===
