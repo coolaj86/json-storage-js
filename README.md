@@ -45,7 +45,7 @@ API
 
   * `JsonStorage.create(DOMStorage, namespace, opts)`
     * `DOMStorage` should be globalStorage, sessionStorage, or localStorage. Defaults to window.localStorage if set to `null`.
-    * `namespace` is optional string which allows multiple non-conflicting storage containers. Use `null` if you want opts but not a namespace
+    * `namespace` is optional string which allows multiple non-conflicting storage containers. For example you could pass two widgets different storage containers and not worry about naming conflicts: `Gizmos.create(JsonStorage.create(null, 'my-gizmos')); Gadgets.create(JsonStorage.create(null, 'my-gadgets'))`
     * `opts`
       * `stringify` set to `false` in `node` to avoid double stringifying
   * `store.get(key)`
@@ -57,14 +57,7 @@ API
   * `store.toJSON()`
   * `JSON.stringify(store)`
 
-Upgrading from localStorage and 1.0.x to 1.1.x
-===
-
-1.1.x automatically attempts to upgrade your DOMStorage to use namespaces in backwards-compatible way.
-
-However, you can prevent this behaviour:
-
-    localStorage.getItem('_json-storage-namespaced_', true);
+**NOTE**: You cannot omit optional parameters. Use `null` if you want accepts the defaults for some things and provide a values for others. For example: `JsonStorage.create(null, null, { stringify: false })`
 
 null vs undefined in JSON
 ===
