@@ -45,7 +45,9 @@ API
 
   * `JsonStorage.create(DOMStorage, namespace, opts)`
     * `DOMStorage` should be globalStorage, sessionStorage, or localStorage. Defaults to window.localStorage if set to `null`.
-    * `namespace` is optional string which allows multiple non-conflicting storage containers. For example you could pass two widgets different storage containers and not worry about naming conflicts: `Gizmos.create(JsonStorage.create(null, 'my-gizmos')); Gadgets.create(JsonStorage.create(null, 'my-gadgets'))`
+    * `namespace` is optional string which allows multiple non-conflicting storage containers. For example you could pass two widgets different storage containers and not worry about naming conflicts:
+      * `Gizmos.create(JsonStorage.create(null, 'my-gizmos'))`
+      * `Gadgets.create(JsonStorage.create(null, 'my-gadgets'))`
     * `opts`
       * `stringify` set to `false` in `node` to avoid double stringifying
   * `store.get(key)`
