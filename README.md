@@ -61,7 +61,7 @@ API
 
 **NOTE**: You cannot omit optional parameters. Use `null` if you want accepts the defaults for some things and provide a values for others. For example: `JsonStorage.create(null, null, { stringify: false })`
 
-null vs undefined in JSON
+JSON / DOMStorage Conversion Gotchas
 ===
 
 These notes do not reflect a bugs or defects in this library,
@@ -70,6 +70,8 @@ they're simply to inform you of a few 'gotchas' inherent in JSON / DOMStorage co
 99.999% of the time these gotchas shouldn't effect you in any way.
 If they do, you're probably doing something wrong in the first place.
 
+
+### `undefined` vs `null`
 
 It is not valid to set `undefined` in JSON. So setting a key to `undefined` will remove it from the store.
 
@@ -84,6 +86,8 @@ Note that both values that exist as `null` and values that don't exist at all wi
     null === store.get('existing-key');
     null === store.get('non-existant-key');
 
+
+### `null` vs `"null"`
 
 The special case of `null` as `"null"`, aka `"\"null\""`:
 
