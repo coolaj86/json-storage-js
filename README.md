@@ -43,9 +43,11 @@ you may wish to pass the `{ stringify: false }` option to prevent double stringi
 API
 ===
 
-  * `JsonStorage.create(DOMStorage, namespace)`
-    * `DOMStorage` should be globalStorage, sessionStorage, or localStorage
-    * `namespace` is optional string which allows multiple non-conflicting storage containers
+  * `JsonStorage.create(DOMStorage, namespace, opts)`
+    * `DOMStorage` should be globalStorage, sessionStorage, or localStorage. Defaults to window.localStorage if set to `null`.
+    * `namespace` is optional string which allows multiple non-conflicting storage containers. Use `null` if you want opts but not a namespace
+    * `opts`
+      * `stringify` set to `false` in `node` to avoid double stringifying
   * `store.get(key)`
   * `store.set(key, value)`
   * `store.remove(key)`
