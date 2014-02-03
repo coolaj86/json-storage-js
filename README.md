@@ -27,7 +27,7 @@ Made for Node.js and Bower (browser-side).
 
     var localStorage = require('localStorage')
       , JsonStorage = require('json-storage').JsonStorage
-      , store = JsonStorage.create(localStorage, 'my-widget-namespace', { stringify: false })
+      , store = JsonStorage.create(localStorage, 'my-widget-namespace', { stringify: true })
       , myValue = {
             foo: "bar"
           , baz: "quux"
