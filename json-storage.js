@@ -34,6 +34,12 @@
       return new JsonStorage(w3cStorage, namespace, opts);
     }
 
+    if (!w3cStorage) {
+      w3cStorage = window.localStorage;
+    } else if ('function' !== typeof w3cStorage.getItem) {
+      throw new Error('You must supply a W3C DOM Storage mechanism such as window.localStorage or window.sessionStorage');
+    }
+
     me._opts = opts || {};
     if (false === me._opts.stringify) {
       me._stringify = false;
