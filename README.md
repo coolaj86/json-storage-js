@@ -11,7 +11,7 @@ Bower (Browser)
 ```bash
 bower install json-storage
 # or
-wget https://raw2.github.com/coolaj86/json-storage-js/master/lib/json-storage.js
+wget https://raw2.github.com/coolaj86/json-storage-js/master/json-storage.js
 ```
 
 Node.JS (Server)
