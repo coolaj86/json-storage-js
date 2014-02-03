@@ -17,7 +17,7 @@ wget https://raw2.github.com/coolaj86/json-storage-js/master/json-storage.js
 Node.JS (Server)
 
 ```bash
-npm install localStorage json-storage
+npm install -S localStorage json-storage
 ```
 
 Usage
