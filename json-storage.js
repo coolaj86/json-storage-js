@@ -52,7 +52,7 @@
     // complicated to figure it out
     this._namespace = delim;
     this._namespace += (namespace || 'jss');
-    if (false === this._namespace) {
+    if (false === namespace) {
       this._namespace = '';
     }
 
