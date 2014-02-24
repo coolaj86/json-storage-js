@@ -25,17 +25,19 @@ Usage
 
 Made for Node.js and Bower (browser-side).
 
-    var localStorage = require('localStorage')
-      , JsonStorage = require('json-storage').JsonStorage
-      , store = JsonStorage.create(localStorage, 'my-widget-namespace', { stringify: true })
-      , myValue = {
-            foo: "bar"
-          , baz: "quux"
-        }
-      ;
+```javascript
+var localStorage = require('localStorage')
+  , JsonStorage = require('json-storage').JsonStorage
+  , store = JsonStorage.create(localStorage, 'my-widget-namespace', { stringify: true })
+  , myValue = {
+        foo: "bar"
+      , baz: "quux"
+    }
+  ;
 
-    store.set('myKey', myValue); 
-    myValue = store.get('myKey');
+store.set('myKey', myValue); 
+myValue = store.get('myKey');
+```
 
 NOTE: When using with Node and the `localStorage` module,
 you may wish to pass the `{ stringify: false }` option to prevent double stringification.
@@ -48,6 +50,8 @@ API
     * `namespace` is optional string which allows multiple non-conflicting storage containers. For example you could pass two widgets different storage containers and not worry about naming conflicts:
       * `Gizmos.create(JsonStorage.create(null, 'my-gizmos'))`
       * `Gadgets.create(JsonStorage.create(null, 'my-gadgets'))`
+      * Namespacing can be turned off by explicitly setting `false`
+        * `Gadgets.create(JsonStorage.create(null, false))`
     * `opts`
       * `stringify` set to `false` in `node` to avoid double stringifying
   * `store.get(key)`
@@ -82,9 +86,11 @@ To save `undefined`, use `null` instead.
 
 Note that both values that exist as `null` and values that don't exist at all will return `null`.
 
-    store.set('existing-key', null);
-    null === store.get('existing-key');
-    null === store.get('non-existant-key');
+```javascript
+store.set('existing-key', null);
+null === store.get('existing-key');
+null === store.get('non-existant-key');
+```
 
 
 ### `null` vs `"null"`

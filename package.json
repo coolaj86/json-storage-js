@@ -3,7 +3,7 @@
   "name": "json-storage",
   "description": "A wrapper for storage engines which use the W3C Storage API",
   "keywords": ["dom", "storage", "json", "w3c", "localStorage", "sessionStorage", "globalStorage", "Storage"],
-  "version": "2.0.1",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/coolaj86/json-storage-js.git"

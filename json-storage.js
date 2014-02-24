@@ -52,6 +52,9 @@
     // complicated to figure it out
     this._namespace = delim;
     this._namespace += (namespace || 'jss');
+    if (false === this._namespace) {
+      this._namespace = '';
+    }
 
     this._store = w3cStorage;
     this._keysAreDirty = true;
@@ -107,7 +110,7 @@
 
       delimAt = key.lastIndexOf(this._namespace);
       // test if this key belongs to this widget
-      if (-1 !== delimAt) {
+      if (!this._namespace || (-1 !== delimAt)) {
         this._keys.push(key.substr(0, delimAt));
       }
     }
